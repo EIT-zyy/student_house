@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>学员管理系统 -by yingyi zhang </title>
+    </head>
+    <body>
+        <h3> <a href="/admin/">Admin</a></h3>
+        <ul>
+            {% for student in students %}
+                <li> {{ student.name }} - {{ student.get_status_display }}</li> 
+            {% endfor %} 
+        </ul>
+        <hr/>
+        <form action="/" method="post">
+            {% csrf_token %} <!-- 数据安全全性校验，提交过去的数据是无效的，防止伪造请求 -->
+            {{ form }}
+            <input type="submit" value="Submit" />
+        </form>
+    </body> 
+</html>
