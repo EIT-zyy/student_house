@@ -6,6 +6,7 @@ The whole project is on django framework, and build an student management system
 ## Enviroment
 
 ```
+mkdir testenv
 cd testenv
 virtualenv student_env
 source student_env/bin/activate
